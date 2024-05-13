@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="TEI">
+      <element name="teiHeader">
+        <element name="fileDesc">
+          <element name="titleStmt">
+            <element name="title">
+              <text/>
+            </element>
+            <element name="author">
+              <text/>
+            </element>
+            <element name="respStmt">
+              <element name="resp">
+                <text/>
+              </element>
+              <element name="name">
+                <text/>
+              </element>
+            </element>
+          </element>
+          <element name="publicationStmt">
+            <ref name="p"/>
+          </element>
+          <element name="sourceDesc">
+            <ref name="p"/>
+          </element>
+        </element>
+        <element name="profileDesc">
+          <element name="particDesc">
+            <oneOrMore>
+              <element name="listPerson">
+                <attribute name="type">
+                  <data type="NCName"/>
+                </attribute>
+                <oneOrMore>
+                  <element name="person">
+                    <attribute>
+                      <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                      <data type="NCName"/>
+                    </attribute>
+                    <ref name="persName"/>
+                  </element>
+                </oneOrMore>
+              </element>
+            </oneOrMore>
+          </element>
+          <element name="textClass">
+            <element name="keywords">
+              <element name="list">
+                <attribute>
+                  <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                  <data type="NCName"/>
+                </attribute>
+                <oneOrMore>
+                  <element name="item">
+                    <attribute>
+                      <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                      <data type="NCName"/>
+                    </attribute>
+                    <element name="term">
+                      <attribute name="type">
+                        <data type="NCName"/>
+                      </attribute>
+                      <text/>
+                    </element>
+                  </element>
+                </oneOrMore>
+              </element>
+            </element>
+          </element>
+        </element>
+        <element name="revisionDesc">
+          <element name="listChange">
+            <oneOrMore>
+              <element name="change">
+                <attribute name="when">
+                  <data type="date"/>
+                </attribute>
+                <text/>
+              </element>
+            </oneOrMore>
+          </element>
+        </element>
+      </element>
+      <element name="text">
+        <element name="body">
+          <oneOrMore>
+            <choice>
+              <ref name="lb"/>
+              <element name="div">
+                <optional>
+                  <attribute name="type">
+                    <data type="NCName"/>
+                  </attribute>
+                </optional>
+                <optional>
+                  <attribute>
+                    <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                    <data type="NCName"/>
+                  </attribute>
+                </optional>
+                <zeroOrMore>
+                  <choice>
+                    <ref name="lb"/>
+                    <element name="head">
+                      <attribute name="rend">
+                        <data type="NCName"/>
+                      </attribute>
+                      <optional>
+                        <attribute>
+                          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                          <data type="NCName"/>
+                        </attribute>
+                      </optional>
+                      <text/>
+                    </element>
+                  </choice>
+                </zeroOrMore>
+                <ref name="p"/>
+              </element>
+            </choice>
+          </oneOrMore>
+        </element>
+      </element>
+    </element>
+  </start>
+  <define name="p">
+    <element name="p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="lb"/>
+          <ref name="persName"/>
+          <ref name="ref"/>
+          <ref name="seg"/>
+          <element name="note">
+            <oneOrMore>
+              <choice>
+                <text/>
+                <ref name="ref"/>
+              </choice>
+            </oneOrMore>
+          </element>
+          <element name="placeName">
+            <data type="NCName"/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="persName">
+    <element name="persName">
+      <optional>
+        <attribute name="ref"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="lb">
+    <element name="lb">
+      <empty/>
+    </element>
+  </define>
+  <define name="seg">
+    <element name="seg">
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <attribute name="type">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="seg"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ref">
+    <element name="ref">
+      <attribute name="target">
+        <data type="anyURI"/>
+      </attribute>
+    </element>
+  </define>
+</grammar>

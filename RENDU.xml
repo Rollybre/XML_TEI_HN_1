@@ -1,0 +1,264 @@
+<?xml-model href="schema_rendu.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns='http://www.tei-c.org/ns/1.0'>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Candle Cove</title> 
+                <author>Kris Straub</author>
+                <respStmt>
+                    <resp>Encodé par </resp>
+                    <name>Alexandre Lionnet-Rollin</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>Encodage de la creepypasta Candle Cove pour le devoir du cours XML-TEI du Master 1 HN</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Candle Cove <ref target="http://ichorfalls.chainsawsuit.com"/> 
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <listPerson type='users'>
+                    <person xml:id="mike_painter65">
+                        <persName>mike_painter65</persName>
+                    </person>
+                    <person xml:id="Skyshale033">
+                        <persName>Skyshale033</persName>
+                    </person>
+                    <person xml:id="Jaren_2005">
+                        <persName>Jaren_2005</persName>
+                    </person>
+                    <person xml:id="kevin_hart">
+                        <persName>kevin_hart</persName>
+                    </person>
+                </listPerson>
+                <listPerson type='fictional'> 
+                    <person xml:id="Janice">
+                        <persName>Janice</persName>
+                    </person>
+                    <person xml:id="Pirate_Percy">
+                        <persName>Pirate Percy</persName>
+                    </person>
+                    <person xml:id="Skin_Taker">
+                        <persName>The Skin-Taker</persName> 
+                    </person>
+                    <person xml:id="Horace_Horrible">
+                        <persName> Horace Horrible</persName>
+                    </person>
+                </listPerson>
+            </particDesc>
+            <textClass>
+               <keywords> 
+                   <list xml:id='topics'>
+                    <item xml:id="topic_peur"><term type="topic">Peur, frayeur et autres</term></item>
+                       <item xml:id="topic_famille"><term type="topic">Famille et relations</term></item>
+                       <item xml:id="topic_souvenir"><term type="topic">Souvenirs et mémoire</term></item>
+                       <item xml:id="topic_enfance"><term type="topic">Enfance, nostalgie</term></item>
+                       <item xml:id="topic_technologie"><term type="topic">Technologie ou plus précisément, ici, technologie de communication principalement</term></item>
+                       <item xml:id="topic_jouet"><term type="topic">Jeux et jouets, raport au ludique</term></item>
+                       <item xml:id="topic_son"><term type="topic">Son en tous genres et musique, rapport à l'audition</term></item>
+                       <item xml:id="topic_sommeil"><term type="topic">Sommeil, rêve et cauchemard</term></item>
+                </list>
+               </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            
+            <listChange>
+               <change when="2024-05-13">Production et association du schéma </change>
+                <change when="2024-05-13"> Ajout de l'encodage des erreurs de grammaire</change>
+                <change when="2024-05-12"> Correction des espaces après les balises et des sauts de lignes entre les postes</change>
+                <change when="2024-05-10"> Ajout encodage sur les mentions des personnages</change>
+                <change when="2024-05-10">Ajouts note sur les lieux</change>
+                <change when="2024-05-10"> Ajotus des balises seg pour encoder les topics</change>
+                <change when="2024-05-10"> Ajout liste topic </change>
+                <change when="2024-05-08"> Création de la structure (div post...)</change>
+                <change when="2024-05-07">Création du document</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <text><body>
+<div type="title">
+    <p><seg type="topic" corresp="#topic_enfance">NetNostalgia</seg> <seg type='topic' corresp="#topic_technologie">Forum - Television</seg> (local)</p>
+</div>
+        
+<div type="post" xml:id="post_01">
+    <head rend='bold'>Skyshale033</head><lb/>
+    <head rend='bold'>Subject: Candle Cove local kid's show?</head><lb/>
+    <p>Does anyone <seg type="topic" corresp="#topic_souvenir">remember</seg> this <seg type="topic" corresp="#topic_enfance">kid's show</seg>? It was called Candle Cove and I must have been <seg type="topic" corresp="#topic_enfance">6 or 7</seg>.
+       I never found reference to it anywhere so I think it was on a local station around 1971 or 1972. 
+       I lived in <placeName>Ironton</placeName><note>Village de l'Ohio, USA.</note> at the time. 
+        I don't <seg type="topic" corresp="#topic_souvenir">remember</seg>which station, but I <seg type="topic" corresp="#topic_souvenir">do remember</seg> it was on at a weird time, like 4:00 PM.</p>
+</div><lb/>
+        
+        <div type='post' xml:id="post_02"><lb/>
+            <head rend="bold" >mike_painter65</head><lb/>
+            <head rend="bold">Subject: Re: Candle Cove local kid's show?</head><lb/>
+            <p> <ref target="#Skyshale033"/>it seems really familiar to me….
+                <seg type="topic" corresp="#topic_enfance">i grew up</seg> 
+                outside of <placeName>ashland</placeName><note>Ville du Kentucky, USA, juste à côté de Ironton.</note>
+                and was 9 yrs old in 72. candle cove…was it about pirates? i <seg type="topic" corresp="#topic_souvenir">remember</seg> a pirate <seg type="topic" corresp="#topic_jouet"><seg type="erreur">marionete</seg></seg> at the mouth of a cave talking to a little girl
+</p></div><lb/>
+        
+        <div type="post" xml:id="post_03">
+    <lb/><head rend = 'bold'>Skyshale033</head>
+    <lb/><head rend = "bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>YES! Okay I'm not crazy! I <seg type='topic' corresp="#topic_souvenir">remember</seg> <persName ref="#Pirate_Percy">Pirate Percy</persName>. I was always kind of <seg type="topic" corresp="#topic_peur">scared</seg> of him. He looked like he was built from 
+        <seg type='topic' corresp="#topic_jouet">parts of other dolls</seg>, real low-budget. His head was an <seg type='topic' corresp="#topic_jouet">old porcelain baby doll</seg>, 
+        looked like an antique that didn't belong on the body. I don't <seg type="topic" corresp="#topic_souvenir">remember</seg> what <seg type="topic" corresp="#topic_technologie">station</seg>
+        this was! I don't think it was WTSF<note>Il existe effectivement une station de télévision dans la ville d'Ashland de ce nom, au canal 61. <ref target="https://en.wikipedia.org/wiki/WTSF"/></note>though.
+    </p></div><lb/>
+        
+        <div type='post' xml:id="post_04">        
+    <lb/><head rend="bold">Jaren_2005</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>Sorry to <seg type="erreur">ressurect</seg> this old thread but I know exactly what show you mean, <persName ref="#Skyshale033">Skyshale</persName>. 
+        I think Candle Cove ran for only a couple months in ‘71, not ‘72. 
+        <seg type="topic" corresp="#topic_enfance">I was 12</seg> and I watched it a few times with my <seg type="topic" corresp="#topic_famille">brother</seg>. It was 
+        <seg type="topic" corresp="#topic_technologie"> channel 58</seg> <note>Channel 58 est une chaîne fictive, qui sert de lien aux productions de l'auteur. C'est d'ailleurs le nom de sa chaîne Youtube.<ref target="https://www.youtube.com/c/local58tv"></ref></note>,
+        whatever station that was. My <seg type="topic" corresp="#topic_famille">mom</seg> would let me switch to it after the news. Let me see <seg type="topic" corresp="#topic_souvenir">what I remember</seg>.
+
+        It took place in Candle cove, and it was about a <seg type="topic" corresp='#topic_enfance'>little girl</seg> who imagined herself to be friends with pirates. 
+        The pirate ship was called the Laughingstock, and <persName ref="#Pirate_Percy">Pirate Percy</persName> wasn't a very good pirate because he got <seg type="topic" corresp="#topic_peur">scared</seg> too easily. 
+        And there was <seg type="topic" corresp="#topic_son">calliope music</seg> constantly playing. 
+        Don't<seg type="topic" corresp="#topic_souvenir">remember</seg>the girl's name. Janice or Jade or something. Think it was <persName ref="#Janice">Janice</persName>.
+    </p></div><lb/>
+        
+        
+        <div type="post" xml:id="post_05">
+    <lb/><head rend="bold">Skyshale033</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>Thank you <persName ref="#Jaren_2005">Jaren</persName>!!! <seg type="topic" corresp="#topic_souvenir">Memories</seg> 
+        flooded back when you mentioned the Laughingstock and <seg type="topic" corresp="#topic_technologie">channel 58</seg>. 
+        I <seg type="topic" corresp="#topic_souvenir">remember</seg> the bow of the ship was a wooden smiling face, with the lower jaw submerged. 
+        It looked like it was swallowing the sea and it had that awful <seg type="topic" corresp="#topic_enfance">Ed Wynn</seg>
+        <note> Ed Wynn est un comédien américain de la première moitié du XXe siècle, connu pour son style "clownesque" et sa voix facilement identifiable.</note>
+        <seg type="topic" corresp="#topic_son">voice and laugh</seg>. I especially <seg type="topic" corresp="#topic_souvenir">remember</seg> how <seg type="topic" corresp="#topic_peur">jarring</seg> it was when they switched from the wooden/plastic model, to 
+        <seg type="topic" corresp="#topic_jouet">the foam puppet version</seg> of the head that talked.
+    </p></div><lb/>
+        
+        <div type="post" xml:id="post_06">
+            <lb/><head rend="bold">mike_painter65</head>
+            <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+            <lb/><p>ha ha i <seg type="topic" corresp="#topic_souvenir">remember</seg> now too. ;) 
+                do you <seg type="topic" corresp="#topic_souvenir">remember</seg> this part <persName ref="#Skyshale033">skyshale</persName>: "you have…to go…INSIDE."
+            </p></div><lb/>
+        
+        <div type="post" xml:id="post_07">
+    <lb/><head rend="bold">Skyshale033</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head> 
+            <lb/><p>Ugh mike, I got <seg type="topic" corresp="#topic_peur">a chill</seg> reading that. Yes <seg type="topic" corresp="#topic_souvenir">I remember</seg>. 
+                That's what the ship always told <persName ref="#Pirate_Percy">Percy</persName> when there was <seg type="topic" corresp="#topic_peur">a spooky place</seg> he had to go in, like a cave or a dark room where the treasure was. 
+        And the <seg type="topic" corresp="#topic_technologie">camera</seg> would push in on Laughingstock's face with each pause. 
+        YOU HAVE… TO GO… INSIDE. 
+        With his two eyes askew and that flopping foam jaw and the fishing line that opened and closed it. Ugh. It just looked so cheap and awful.
+        You guys <seg type="topic" corresp="#topic_souvenir">remember</seg> the villain? He had a face that was just a handlebar mustache above really tall, narrow teeth.</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_08">           
+     <lb/><head rend="bold">kevin_hart</head>
+     <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+     <lb/><p>i honestly, honestly thought the villain was <persName ref="#Pirate_Percy">pirate percy</persName>. 
+         <seg type="topic" corresp="#topic_enfance">i was about 5</seg> when this show was on. 
+         <seg type="topic" corresp="#topic_sommeil">nightmare</seg> fuel.
+     </p></div><lb/>
+            
+        <div type="post" xml:id="post_09">
+    <lb/><head rend="bold">Jaren_2005</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>That wasn't the villain, the puppet with the mustache. 
+        That was the villain's sidekick, <persName ref="#Horace_Horrible">Horace Horrible</persName>. 
+        He had a monocle too, but it was on top of the mustache. I used to think that meant he had only one eye.<lb/>
+        But yeah, the villain was another <seg type="topic" corresp="#topic_jouet">marionette</seg>. <persName ref="#Skin_Taker">The Skin-Taker</persName>. 
+        I can't believe what they let us watch back then.</p>
+</div><lb/>
+            
+            
+        <div type='post' xml:id="post_10">
+    <lb/><head rend="bold">kevin_hart</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <p>jesus h. christ, the skin taker. what kind of a <seg type="topic" corresp="#topic_enfance">kids show</seg> were we watching? 
+        i seriously could not look at the <seg type="topic" corresp="#topic_technologie">screen</seg> when <persName ref="#Skin_Taker">the skin taker</persName> showed up. 
+        he just descended out of nowhere on his strings, just a dirty skeleton wearing that brown top hat and cape. 
+    and his glass eyes that were too big for his skull. christ almighty.</p>
+</div><lb/>
+            
+            
+            
+        <div type="post" xml:id="post_11">
+    <lb/><head rend='bold'>Skyshale033</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>Wasn't his top hat and cloak all sewn up crazily? Was that supposed to be <seg type="topic" corresp="#topic_enfance">children's skin</seg>??</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_12">
+    <lb/><head rend="bold">mike_painter65</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+            <lb/><p>yeah i think so. <seg type="topic" corresp="#topic_souvenir"><seg type="erreur">rememer</seg></seg> his mouth didn't open and close, his jaw just slid back and <seg type="erreur">foth</seg>. 
+        i <seg type="topic" corresp="#topic_souvenir">remember</seg> 
+        <seg type="topic" corresp="#topic_enfance">the little girl</seg> said "why does your mouth move like that" and 
+        <persName ref="#Skin_Taker">the skin-taker</persName> didn't look at the girl but at the <seg type="topic" corresp="#topic_technologie">camera</seg> and said "TO GRIND YOUR SKIN"</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_13">
+    <lb/><head rend="bold">Skyshale033</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>I'm so relieved that other people <seg type="topic" corresp="#topic_souvenir">remember</seg> this terrible show!<lb/>
+    I used to have this <seg type='topic' corresp="#topic_souvenir">awful memory</seg>, a bad <seg type="topic" corresp="#topic_sommeil">dream</seg> 
+        I had where the opening jingle ended, the show faded in from black, and all the characters were there, but 
+        <seg type='topic' corresp="#topic_technologie">the camera</seg>
+        was just cutting to each of their faces, and they were just 
+        <seg type="topic" corresp="#topic_son">screaming</seg>, 
+        and the <seg type="topic" corresp="#topic_jouet">puppets and marionettes</seg> were flailing <seg type='erreur'>spastically</seg>, and just all <seg type="topic" corresp="#topic_son">screaming, screaming</seg>. 
+        The girl was just 
+        <seg type="topic" corresp="#topic_son">moaning and crying</seg> like she had been through hours of this. 
+        I woke up many times from that <seg type="topic" corresp="#topic_sommeil">nightmare</seg>. I used to wet the bed when I had it.</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_14">
+    <lb/><head rend="bold">kevin_hart</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>i don't think that was a <seg type="topic" corresp="#topic_sommeil">dream</seg>. 
+        i <seg type="topic" corresp="#topic_souvenir">remember</seg> that. 
+        i <seg type="topic" corresp="#topic_souvenir">remember</seg> that was an episode.</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_15">
+    <lb/><head rend="bold">Skyshale033</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>No no no, not possible. There was no plot or anything, I mean literally just standing in place 
+        <seg type="topic" corresp="#topic_son">crying and screaming</seg> for the whole show.</p>
+</div><lb/>
+            
+            
+        <div type="post" xml:id="post_16">
+    <lb/><head rend="bold">kevin_hart</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>maybe i'm manufacturing <seg type="topic" corresp="#topic_souvenir">the memory</seg> because you said that, but i swear to god i 
+        <seg type="topic" corresp="#topic_souvenir">remember</seg> seeing what you described. they just <seg type="topic" corresp="#topic_son">screamed</seg>.
+</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_17">
+    <lb/><head rend="bold">Jaren_2005</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>Oh God. Yes. The little girl, Janice, I <seg type="topic" corresp="#topic_souvenir">remember</seg> seeing her shake. And <persName ref="#Skin_Taker">the Skin-Taker</persName> 
+        <seg type="topic" corresp="#topic_son">screaming</seg> through his gnashing teeth, his jaw careening so wildly I thought it would come off its wire hinges. 
+        I turned it off and it was the last time I watched. I ran to tell my <seg type="topic" corresp="#topic_famille">brother</seg> and<seg type="topic" corresp="#topic_peur"> we didn't have the courage</seg> to turn it back on.</p>
+</div><lb/>
+            
+        <div type="post" xml:id="post_18">
+    <lb/><head rend='bold'>mike_painter65</head>
+    <lb/><head rend="bold">Subject: Re: Candle Cove local kid's show?</head>
+    <lb/><p>i visited my <seg type="topic" corresp="#topic_famille">mom</seg> today at the nursing home. 
+        i asked her about when <seg type="topic" corresp="#topic_enfance">i was <seg type="erreur">littel</seg></seg> in the early 70s, when i was 8 or 9 and if she 
+        <seg type="topic" corresp="#topic_souvenir"><seg type="erreur">remebered</seg></seg> a kid's show, candle cove. she said she was <seg type='erreur'>suprised</seg> i could <seg type="topic" corresp="#topic_souvenir"><seg type="erreur">remember</seg> </seg>that and i asked why, 
+        and she said "because i used to think it was so strange that you said ‘i'm <seg type="erreur">gona</seg> go watch candle cove now 
+        <seg type="topic" corresp="#topic_famille">mom</seg>' and then you would tune 
+        <seg type="topic" corresp="#topic_technologie">the tv to static </seg>and <seg type="erreur">juts</seg> watch dead air for 30 minutes. you had a big imagination with your little pirate show."</p> 
+</div>
+</body></text>
+
+</TEI>
